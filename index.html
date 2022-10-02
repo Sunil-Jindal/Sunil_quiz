@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz App</title>
+</head>
+
+<body>
+
+    <main>
+
+        <!-- enter name or rules screen start-->
+        <div class="getname" id="mainrulesnamediv">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="maininfoparentdiv">
+                            <div class="getnamebyuser">
+                                <label for="usergetname" class="en">Enter Your Name</label>
+                                <input type="text" name="" class="form-control" id="usergetname" required>
+                                <div class="enterName">
+                                    <!-- <p>Please Enter Your Name</p>  -->
+                                  </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="main-info-div">
+                                    <div class="infoheader">
+                                        <p class="headerheding">Some Rules of This Quiz's</p>
+                                    </div>
+                                    <div class="rulesdiv">
+                                        <p class="rule">1. You will have only <span class="timesecp">15 seconds</span>
+                                            per each question.</p>
+                                        <p class="rule">2. Onec you select your answer. It can’t be undo.</p>
+                                        <p class="rule">3. You cant’t select any option Onec time goes off.</p>
+                                        <p class="rule">4. You can’t be exit from the quiz while you’re playing.</p>
+                                        <p class="rule">5. You will get point on the basis of your correct answer.</p>
+                                        <p class="rule">6. If you select wrong answer then cut 0.5 marks.</p>
+                                    </div>
+                                    <div class="btndivs">
+
+                                        <button type="submit" class="continue" id="continuebtn">Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- enter name or rules screen end-->
+
+
+        <div class="main-screen">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 p-0">
+                        <!-- enter sidebar start-->
+                        <div class="sidebar" id="main-screen-output">
+                            <div class="main-side-content">
+                                <div class="heading-name">
+                                    <h1 class="name">Hii <span id="username"></span> <br>
+                                        Welcome to this game </h1>
+                                </div>
+                                <div class="main-score-board">
+                                    <ul class="score-list">
+                                        <li class="list-show">
+                                            <p class="para">Total Question</p>
+                                            <p class="score totalQuestion">
+                                                <!-- <span class="firstDigi">0</span>/<span class="secondDigi">15</span> -->
+                                            </p>
+                                        </li>
+                                       
+                                        <li class="list-show">
+                                            <p class="para">Complete Level</p>
+                                            <p class="score">
+                                                <span class="firstDigi">0</span>/<span class="secondDigi">3</span>
+                                            </p>
+                                        </li>
+                                        <li class="list-show ">
+                                            <p class="para">Correct Answer</p>
+                                            <p class="score correctPans">
+                                                <!-- <span class="firstDigi">5</span>/<span class="secondDigi">15</span> -->
+                                            </p>
+                                        </li>
+                                        <li class="list-show">
+                                            <p class="para">Incorrect Question</p>
+                                            <p class="score incCorrectPans">
+                                                <!-- <span class="firstDigi">5</span>/<span class="secondDigi">15</span> -->
+                                            </p>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- enter sidebar end-->
+                    </div>
+                    <div class="col-lg-8 p-0">
+
+                        <div class="main_question">
+                            <!-- main question screen start -->
+                            <div class="main-div-width w60 question-screen" id="questionScreen">
+                                <div class="question_time_main">
+                                    <div class="mainquestion">
+                                        <!-- <p class="question">What is HTML full form </p> -->
+                                    </div>
+                                    <div class="question_time">
+                                        <div class="secdiv">
+                                            <span class="second timerStart">15</span>
+                                            <span class="second">sec</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeLine w100per"></div>
+
+                                <!-- correct,incorrect -->
+                                <div class="optiondiv">
+                                    <!-- <div class="option">
+                                        <span class="optionText">Hypertext Markup Language</span>
+                                    </div>
+                                    <div class="option">
+                                        <span class="optionText">Hypertext Markup Language</span>
+                                    </div>
+                                    <div class="option">
+                                        <span class="optionText">Hypertext Markup Language</span>
+                                    </div>
+                                    <div class="option">
+                                        <span class="optionText">Hypertext Markup Language</span>
+                                    </div> -->
+                                </div>
+                                <div class="nextbtndiv" id="nextQuestionBtn">
+                                    <div class="nextbt" >Next <img src="images.png" alt="" class="img-arrow"></div>
+                                </div>
+                            </div>
+                            <!-- main question screen start -->
+
+                            <!-- mwinner screen start -->
+                            <div class="winner-div" id="winnerScreen">
+                                <div class="mainwinerdiv">
+                                    <img src="" alt="">
+                                    <p class="winertext">
+                                        <!-- <span smile.png class="showGret">Well done </span> 
+                                        <span id="username">Sunil</span> 
+                                        <br> You got 
+                                        <span class="correctAns">5</span> out <span class="total">5</span> -->
+                                    </p>
+                                    <div class="restartQuiz" id="restartQuizId">
+                                        <div class="restart" >Restart Quiz</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- mwinner screen start -->
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="questionlist.js"></script>
+</body>
+
+</html>
